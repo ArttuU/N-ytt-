@@ -31,14 +31,8 @@
          
              <div class="row">
                  <div class="col-md-8">
-                     <p>Toimielimet</p>
+                     <p>Vuosi 2017</p>
                  </div>
-             <div class="col-md-2">
-                 <p>Viimeisin kokous</p>
-             </div>
-             <div class="col-md-2">
-                 <p>Dokumenttityyppi</p>
-             </div>
          </div>
          
          <div class="row">
@@ -52,8 +46,8 @@
            while($t = $nayta -> fetch_object()){
            $numero = 0;
            $numero = $numero + 1;
-             echo '<div class="col-md-2">'."<p>". $t -> päivämäärä ."</p>"."</div>";
-             echo '<div class="col-md-8">'.'<a href="'. $t -> tyyppi.$numero .'.php">' .  $t ->  tyyppi."</a>"."</div>";
+             echo '<div class="col-md-8">'."<p>". $t -> päivämäärä ."</p>"."</div>";
+             echo '<div class="col-md-2">'.'<a href="'. $t -> tyyppi.$numero .'.php">' .  $t ->  tyyppi."</a>"."</div>";
           }
 
           $my -> close(); 
