@@ -10,7 +10,7 @@
     </head>
     <body>
      <div class="container">
-         <div class="row">
+         <div class="row header">
              <div class="col-md-8">
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
@@ -25,18 +25,18 @@
             </div>
          </div>
          <div class="row">
-             <div class="col-md-12">
+             <div class="col-md-12 nimi">
                  <h1>Toimielimet</h1>
              </div>
          
              <div class="row">
-                 <div class="col-md-8">
+                 <div class="col-md-8 otsikot">
                      <p>Toimielimet</p>
                  </div>
-             <div class="col-md-2">
+             <div class="col-md-2 otsikot">
                  <p>Viimeisin kokous</p>
              </div>
-             <div class="col-md-2">
+             <div class="col-md-2 otsikot">
                  <p>Dokumenttityyppi</p>
              </div>
          </div>
