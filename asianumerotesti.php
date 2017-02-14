@@ -26,19 +26,9 @@
          </div>
          <div class="row">
              <div class="col-md-12 nimi">
-                 <h1>TESTI</h1>
+                 <h1>TESKaupunginhallitus Esityslista 13.02.2017/Asianro 75TI</h1>
              </div>
-         
-             <div class="row">
-                 <div class="col-md-2 otsikot">
-                     <p>Asiannumero</p>
-                 </div>
-             <div class="col-md-10 otsikot">
-                 <p>otsikko</p>
-             </div>
-         </div>
-         
-         
+
            <?php
             include "settings.php";
             
@@ -48,32 +38,12 @@
            $nimet = 'SELECT * FROM 6552_Osallistujat';
            $nayta2 = $my -> query($nimet);
            
-           while($t = $nayta -> fetch_object()){
-             echo '<div class="row">';
-             echo '<div class="col-md-2">'."<p>". $t -> asianro . "</p>" ."</div>";
-             echo '<div class="col-md-10">'.'<a href="'. $t -> link .'.php">' .  $t -> otsikko."</a>"."</div>";
-             echo "</div>";
-           }
-
-           ?>
-
-           <div class="row">
-            <div class="col-md-5 otsikot">
-             <p>Osallistuja</p> 
-            </div>
-            <div class="col-md-7 otsikot">
-             <p>Tehtävä</p>
-            </div>
-           </div>
-
-           <?php
-
            while($r = $nayta2 -> fetch_object()){
              echo '<div class="row">';
              echo '<div class="col-md-5">'. "<p>". $r -> osallistuja ."</p>". "</div>";
              echo '<div class="col-md-7">'. "<p>". $r -> tehtava ."</p>"."</div>";
              echo '</div>';
-           }          
+           }   
 
           $my -> close(); 
            ?>
