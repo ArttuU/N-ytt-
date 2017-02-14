@@ -12,8 +12,12 @@
 
      <div class="container">
          <div class="row header">
-             <div class="col-md-8">
+             <div class="col-md-3">
                  <p>DYNASTY TIETOPALVELU</p>
+             </div>
+             <div class="col-md-5">
+                 <a
+                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/toimielimet.php">ETUSIVU</a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
@@ -25,7 +29,8 @@
                  <p>Haku</p>
             </div>
          </div>
-         
+
+                 
          <div class="row">
              <div class="col-md-12 nimi">
                  <h1>Kirjaudu</h1>
