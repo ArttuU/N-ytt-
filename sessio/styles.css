@@ -1,0 +1,14 @@
+.nimi{
+    text-align: center;
+    color: lightblue;
+}
+.otsikot{
+    background-color: lightgrey;
+    font-weight: bold;
+}
+.header{
+    border: 1px solid black;
+}
+.lomake {
+    text-align: center;
+}
