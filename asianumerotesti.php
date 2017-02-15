@@ -32,17 +32,26 @@
            <?php
             include "settings.php";
             
-           $otsikko = 'SELECT * FROM 605W_pöytäkirja';
+           $otsikko = 'SELECT * FROM 605W_poytakirja_asia';
            $nayta = $my -> query($otsikko);
-
-           $nimet = 'SELECT * FROM 6552_Osallistujat';
-           $nayta2 = $my -> query($nimet);
            
-           while($r = $nayta2 -> fetch_object()){
-             echo '<div class="row">';
-             echo '<div class="col-md-5">'. "<p>". $r -> osallistuja ."</p>". "</div>";
-             echo '<div class="col-md-7">'. "<p>". $r -> tehtava ."</p>"."</div>";
-             echo '</div>';
+           while($t = $nayta -> fetch_object()){
+               echo '<div class="row">';
+                echo '<div class="col-md-5">';
+                 echo '<p>'. $t -> toimielin . '</p>';
+                echo '</div>';
+                echo '<div class="col-md-2">';
+                 echo '<p>'. $t -> asianro . '</p>';
+                echo '</div>';
+                echo '<div class="col-md-5">';
+                 echo '<p>'. $t -> pva . '</p>';
+                echo '</div>';
+               echo '</div>';
+               echo '<div class="row">';
+                echo '<div class="col-md-12">';
+                 echo '<pre>' . $t -> text . '</pre>';
+                echo '</div>' ;
+               echo '</div>';
            }   
 
           $my -> close(); 

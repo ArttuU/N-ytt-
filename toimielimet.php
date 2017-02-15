@@ -55,10 +55,17 @@
            while($t = $nayta -> fetch_object()){
              echo '<div class="col-md-8">'.'<a href="'. $t -> toimielimet .'.php">' .  $t -> toimielimet."</a>"."</div>";
              echo '<div class="col-md-2">'."<p>". $t -> viimeisinkokous ."</p>"."</div>";
-             echo '<div class="col-md-2">'."<p>". $t -> dokumenttityyppi ."</p>"."</div>";
           }
 
-          $my -> close(); 
+        $tyyppi = 'SELECT * FROM 6552_Vuosi';
+        $nayta2 = $my -> query($tyyppi);
+
+        while($r = $nayta2 -> fetch_object()){
+            $numero = $numero + 1;
+            echo '<div class="col-md-2">'.'<a href="'. $r -> tyyppi.$numero. '.php">'. $r -> tyyppi. "</a>"."</div>"; 
+        }
+
+          $my -> close();
            ?>
          
          </div>
