@@ -28,6 +28,37 @@
    $my->close();
   }  
 ?>
+
+<?php   
+  include("hallinta.php");
+  // Tähän tallennus
+  $send2 = $_GET['send2'];
+  $osallistuja = $_GET['osallistuja'];
+  $tehtava = $_GET['tehtava'];
+
+  if($send2=='true') {
+
+   $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+   if($my->mysql_errno) {
+    die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
+   }
+
+   $my->set_charset('utf8');
+   $sql = 'INSERT INTO 6552_Osallistujat (osallistuja, tehtava)
+            VALUES ("'.$osallistuja.'","'.$tehtava.'")';
+
+   if($tulos = $my->query($sql)) {
+    header("Location: index.php");
+   } else {
+
+     echo '<p>Tallennus epäonnistui!</p>';
+   }
+
+   $my->close();
+  }     
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -66,21 +97,22 @@
         </div>
     </div>
 
- 
+    <br>
+      
        <div class="row">
        <div class="col-md-12 lomake">   
-       <h2>Toimielimet</h2>
+       <h2>Toimielimeen lisättävä tiedosto</h2>
        <br>
        <form>
 
            <label>Tiedoston nimi:</label>
-           <input type="text" name="toimielimet" value="<?=$_GET['toimielimet']?>"><br><br>
+           <input type="text" name="toimielimet" value="<?=$_GET['toimielimet']?>" required><br><br>
 
            <label>Päivämäärä:</label>
-           <input type="text" name="viimeisinkokous" value="<?=$_GET['viimeisinkokous']?>"><br><br>
+           <input type="text" name="viimeisinkokous" value="<?=$_GET['viimeisinkokous']?>" required><br><br>
            
            <label>Tyyppi (Pöytäkirja/Esityslista):</label>           
-           <input type="text" name="dokumenttityyppi" value="<?=$_GET['dokumenttityyppi']?>"><br><br>           
+           <input type="text" name="dokumenttityyppi" value="<?=$_GET['dokumenttityyppi']?>" required><br><br>           
            
            <button class="button" type="submit" name="send1" value="true">Lähetä</button>
         </form>
@@ -91,23 +123,21 @@
 
        <div class="row">
        <div class="col-md-12 lomake">   
-       <h2>Nimet</h2>
+       <h2>Osallistujalista</h2>
        <br>
        <form>
 
-           <label>sample</label>
-           <input type="text" name="" value="<?=$_GET['']?>"><br><br>
+           <label>Nimi:</label>
+           <input type="text" name="osallistuja" value="<?=$_GET['osallistuja']?>" required><br><br>
 
-           <label>sample</label>
-           <input type="text" name="" value="<?=$_GET['']?>"><br><br>
-
-           <label>sample</label>
-           <input type="text" name="" value="<?=$_GET['']?>"><br><br>
+           <label>Tehtävä:</label>
+           <input type="text" name="tehtava" value="<?=$_GET['tehtava']?>" required><br><br>
 
            <button class="button" type="submit" name="send2" value="true">Lähetä</button>
         </form>
         </div>
         </div>
+
 
     
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    

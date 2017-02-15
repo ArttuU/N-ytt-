@@ -22,10 +22,20 @@ label {
     position:relative;
 }
 
-input[type=text] {
-    padding:6px; 
+input[type=text],input[type=password] {
+    padding:7px; 
     border:2px solid #ccc; 
     -webkit-border-radius: 5px;
     border-radius: 7px;
-    width: 250px;
+    width: 255px;
+}
+
+button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
