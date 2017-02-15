@@ -15,7 +15,8 @@
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
              <div class="col-md-5">
-                 <a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php">HALLINTA</a>
+                 <a
+                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php"><strong>HALLINTA</strong></a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
@@ -27,7 +28,7 @@
                  <p>Haku</p>
             </div>
          </div>
-         <div class="row">
+          <div class="row">
              <div class="col-md-12 nimi">
                  <h1>Toimielimet</h1>
              </div>
@@ -53,7 +54,7 @@
 
 
            while($t = $nayta -> fetch_object()){
-             echo '<div class="col-md-8">'.'<a href="'. $t -> toimielimet .'.php">' .  $t -> toimielimet."</a>"."</div>";
+             echo '<div class="col-md-8">'.'<a href="'. $t -> toimielimet.'.php">' . $t -> toimielimet."</a>"."</div>";
              echo '<div class="col-md-2">'."<p>". $t -> viimeisinkokous ."</p>"."</div>";
              echo '<div class="col-md-2">'."<p>". $t -> dokumenttityyppi ."</p>"."</div>";
           }
@@ -63,7 +64,7 @@
          
          </div>
      </div>
-
+     </div>
  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>     
     </body>

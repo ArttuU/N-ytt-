@@ -1,5 +1,32 @@
 <?php
   include("hallinta.php");
+  // Tähän tallennus
+  $send = $_GET['send'];
+  $toimielimet = $_GET['toimielimet'];
+  $viimeisinkokous = $_GET['viimeisinkokous'];
+  $dokumenttityyppi = $_GET['dokumenttityyppi'];
+
+  if($send=='true') {
+
+   $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+   if($my->mysql_errno) {
+    die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
+   }
+
+   $my->set_charset('utf8');
+   $sql = 'INSERT INTO 605W_toimielimet (toimielimet, viimeisinkokous, dokumenttityyppi)
+            VALUES ("'.$toimielimet.'","'.$viimeisinkokous.'","'.$dokumenttityyppi.'")';
+
+   if($tulos = $my->query($sql)) {
+    header("Location: index.php");
+   } else {
+
+     echo '<p>Tallennus epäonnistui!</p>';
+   }
+   
+   $my->close();
+  }  
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,50 +66,27 @@
         </div>
     </div>
 
-   
-      <div class="row">
-      <div class="col-md-12">
+ 
+       <div class="row">
+       <div class="col-md-12 lomake">   
+       <h2>Toimielimet</h2>
+       <br>
        <form>
-           <input type="text" name="toimielimet" placeholder="Tiedosto nimi" value="<?=$_GET['toimielimet']?>">
-           <input type="text" name="viimeisinkokous" placeholder="Päivämäärä" value="<?=$_GET['viimeisinkokous']?>">
-           <input type="text" name="dokumenttityyppi" placeholder="Pöytäkirja/Esityslista" value="<?=$_GET['dokumenttityyppi']?>">           
+
+           <label>Tiedoston nimi:</label>
+           <input type="text" name="toimielimet" value="<?=$_GET['toimielimet']?>"><br><br>
+
+           <label>Päivämäärä:</label>
+           <input type="text" name="viimeisinkokous" value="<?=$_GET['viimeisinkokous']?>"><br><br>
+           
+           <label>Tyyppi (Pöytäkirja/Esityslista):</label>           
+           <input type="text" name="dokumenttityyppi" value="<?=$_GET['dokumenttityyppi']?>"><br><br>           
+           
            <button class="primary button" type="submit" name="send" value="true">Lähetä</button>
         </form>
-       </div>
-       </div>
+        </div>
+        </div>
 
-        <?php
-
-        $send = $_GET['send'];
-        $toimielimet = $_GET['toimielimet'];
-        $viimeisinkokous = $_GET['viimeisinkokous'];
-        $dokumenttityyppi = $_GET['dokumenttityyppi'];
-
-        if($send=='true') {
-
-    $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
-
-    if($my->mysql_errno) {
-        die("MySQL, vithe yhteyden luonnissa: " .$my->connect_error);
-    }
-
-    $my->set_charset('utf8');
-    $sql = 'INSERT INTO 605W_toimielimet (id, toimielimet, viimeisinkokous, dokumenttityyppi)
-            VALUES
-            ("'.NULL.'","'.$toimielimet.'","'.$viimeisinkokous.'","'.$dokumenttityyppi.'")';
-
-    if($tulos = $my->query($sql)) {
-
-     echo '<p>Tallennettu</p>';
-
-   } else {
-
-     echo '<p>Tallennus epäonnistui!</p>';
-   }
-   
-   $my->close();
-  }
-    ?>
 
     
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    

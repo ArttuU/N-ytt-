@@ -29,7 +29,7 @@
 
 
     //Tehdään SQL-kysely tunnuksesta ja salasanasta
-    $sql = "SELECT * FROM 005_login WHERE login='$login' AND passwd='$passwd'";
+    $sql = "SELECT * FROM 6552_login WHERE login='$login' AND passwd='$passwd'";
     if($res = $my->query($sql)) {
 
 
