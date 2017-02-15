@@ -17,7 +17,7 @@
              </div>
              <div class="col-md-5">
                  <a
-                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/toimielimet.php">ETUSIVU</a>
+                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/toimielimet.php"><strong>ETUSIVU</strong></a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
@@ -30,7 +30,7 @@
             </div>
          </div>
 
-         
+                 
          <div class="row">
              <div class="col-md-12 nimi">
                  <h1>Kirjaudu</h1>
@@ -42,7 +42,7 @@
          
          <form action="index.php" method="post">
            <p>Tunnus:<br>
-         <input type="login" name="login"></p>
+         <input type="text" name="login"></p>
            <p>Salasana:<br>
          <input type="password" name="passwd"></p>
          <button name="btn" value="1">Kirjaudu</button>
@@ -50,6 +50,7 @@
        
        </div>
       </div>
+     </div>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
     </body>
 </html>

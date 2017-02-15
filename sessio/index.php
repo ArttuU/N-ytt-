@@ -1,12 +1,12 @@
 <?php
   include("hallinta.php");
   // Tähän tallennus
-  $send = $_GET['send'];
+  $send1 = $_GET['send1'];
   $toimielimet = $_GET['toimielimet'];
   $viimeisinkokous = $_GET['viimeisinkokous'];
   $dokumenttityyppi = $_GET['dokumenttityyppi'];
 
-  if($send=='true') {
+  if($send1=='true') {
 
    $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
 
@@ -66,23 +66,48 @@
         </div>
     </div>
 
-   
-      <div class="row">
-      <div class="col-md-12 lomake">
+ 
+       <div class="row">
+       <div class="col-md-12 lomake">   
        <h2>Toimielimet</h2>
+       <br>
        <form>
-           <input type="text" name="toimielimet" placeholder="Tiedosto nimi" value="<?=$_GET['toimielimet']?>">
-           <input type="text" name="viimeisinkokous" placeholder="Päivämäärä" value="<?=$_GET['viimeisinkokous']?>">
-           <input type="text" name="dokumenttityyppi" placeholder="Pöytäkirja/Esityslista" value="<?=$_GET['dokumenttityyppi']?>">           
-           <button class="primary button" type="submit" name="send" value="true">Lähetä</button>
+
+           <label>Tiedoston nimi:</label>
+           <input type="text" name="toimielimet" value="<?=$_GET['toimielimet']?>"><br><br>
+
+           <label>Päivämäärä:</label>
+           <input type="text" name="viimeisinkokous" value="<?=$_GET['viimeisinkokous']?>"><br><br>
+           
+           <label>Tyyppi (Pöytäkirja/Esityslista):</label>           
+           <input type="text" name="dokumenttityyppi" value="<?=$_GET['dokumenttityyppi']?>"><br><br>           
+           
+           <button class="button" type="submit" name="send1" value="true">Lähetä</button>
         </form>
-       </div>
-       </div>
-
-        <?php
+        </div>
+        </div>
 
 
-    ?>
+
+       <div class="row">
+       <div class="col-md-12 lomake">   
+       <h2>Nimet</h2>
+       <br>
+       <form>
+
+           <label>sample</label>
+           <input type="text" name="" value="<?=$_GET['']?>"><br><br>
+
+           <label>sample</label>
+           <input type="text" name="" value="<?=$_GET['']?>"><br><br>
+
+           <label>sample</label>
+           <input type="text" name="" value="<?=$_GET['']?>"><br><br>
+
+           <button class="button" type="submit" name="send2" value="true">Lähetä</button>
+        </form>
+        </div>
+        </div>
 
     
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
