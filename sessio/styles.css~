@@ -30,12 +30,27 @@ input[type=text],input[type=password] {
     width: 255px;
 }
 
-button {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+textarea[type=text] {
+    padding:7px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 7px;
+    width: 300px;
+    height: 100px;
 }
 
-button:hover {
-    background-color: #4CAF50; /* Green */
+.button { 
+    font-size: 20px;
+    background-color: white; 
+    border-radius: 5px;
+    border-color:grey;
+    border-width:1px;
+
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+.button:hover {
+    background-color: black;
     color: white;
 }
