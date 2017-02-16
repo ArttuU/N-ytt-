@@ -11,8 +11,11 @@
     <body>
      <div class="container">
          <div class="row header">
-             <div class="col-md-8">
+             <div class="col-md-5">
                  <p>DYNASTY TIETOPALVELU</p>
+             </div>
+             <div class="col-md-5">
+                 <a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php">HALLINTA</a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
@@ -45,6 +48,11 @@
                 echo '</div>';
                 echo '<div class="col-md-5">';
                  echo '<p>'. $t -> pva . '</p>';
+                echo '</div>';
+               echo '</div>';
+               echo '<div class="row">';
+                echo '<div class="col-md-12">';
+
                 echo '</div>';
                echo '</div>';
                echo '<div class="row">';

@@ -30,10 +30,10 @@
              </div>
          
              <div class="row">
-                 <div class="col-md-2 otsikot">
+                 <div class="col-md-5 otsikot">
                      <p>Asiannumero</p>
                  </div>
-             <div class="col-md-10 otsikot">
+             <div class="col-md-7 otsikot">
                  <p>otsikko</p>
              </div>
          </div>
@@ -50,8 +50,8 @@
            
            while($t = $nayta -> fetch_object()){
              echo '<div class="row">';
-             echo '<div class="col-md-2">'."<p>". $t -> asianro . "</p>" ."</div>";
-             echo '<div class="col-md-10">'.'<a href="'. $t -> link .'.php">' .  $t -> otsikko."</a>"."</div>";
+             echo '<div class="col-md-5 ">'."<p>". $t -> asianro . "</p>" ."</div>";
+             echo '<div class="col-md-7 ">'.'<a href="'. $t -> link .'.php">' .  $t -> otsikko."</a>"."</div>";
              echo "</div>";
            }
 

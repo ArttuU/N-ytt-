@@ -10,9 +10,12 @@
     </head>
     <body>
      <div class="container">
-         <div class="row">
-             <div class="col-md-8">
+         <div class="row header">
+             <div class="col-md-3">
                  <p>DYNASTY TIETOPALVELU</p>
+             </div>
+             <div class="col-md-5">
+                 <a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php">HALLINTA</a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
@@ -25,13 +28,13 @@
             </div>
          </div>
          <div class="row">
-             <div class="col-md-12">
+             <div class="col-md-12 nimi">
                  <h1>Testi</h1>
              </div>
          
              <div class="row">
-                 <div class="col-md-12 otsikot">
-                     <p>Vuosi 2017</p>
+                 <div class="col-md-12 otsikot center">
+                     <p>Vuosi 2017 </p>
                  </div>
          </div>
          
@@ -46,8 +49,8 @@
            while($t = $nayta -> fetch_object()){
            $numero = 0;
            $numero = $numero + 1;
-             echo '<div class="col-md-8">'."<p>". $t -> päivämäärä ."</p>"."</div>";
-             echo '<div class="col-md-2">'.'<a href="'. $t -> tyyppi.$numero .'.php">' .  $t ->  tyyppi."</a>"."</div>";
+             echo '<div class="col-md-4">'."<p>". $t -> päivämäärä ."</p>"."</div>";
+             echo '<div class="col-md-8">'.'<a href="'. $t -> tyyppi.$numero .'.php">' .  $t ->  tyyppi."</a>"."</div>";
           }
 
           $my -> close(); 
