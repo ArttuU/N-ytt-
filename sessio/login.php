@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-            <title>Hallinta</title>
+            <title>Hallintaan kirjautuminen</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -45,7 +45,7 @@
          <input type="text" name="login"></p>
            <p>Salasana:<br>
          <input type="password" name="passwd"></p>
-         <button name="btn" value="1">Kirjaudu</button>
+         <button class="button" name="btn" value="1">Kirjaudu</button>
        </form>
        
        </div>

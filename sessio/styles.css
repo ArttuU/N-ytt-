@@ -23,11 +23,20 @@ label {
 }
 
 input[type=text],input[type=password] {
-    padding:7px; 
+    padding:8px; 
     border:2px solid #ccc; 
     -webkit-border-radius: 5px;
     border-radius: 7px;
-    width: 255px;
+    width: 310px;
+}
+
+textarea[type=text] {
+    padding:8x; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 7px;
+    width: 310px;
+    height: 120px;
 }
 
 .button { 
