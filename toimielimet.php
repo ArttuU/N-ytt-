@@ -15,7 +15,8 @@
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
              <div class="col-md-5">
-                 <a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php">HALLINTA</a>
+                 <a
+                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php"><strong>HALLINTA</strong></a>
              </div>
              <div class="col-md-2 ">
                  <p>KOKKOLA</p>

@@ -68,15 +68,10 @@
           $my -> close();
            ?>
          
-<<<<<<< HEAD
-         </div>
-     </div>
-
-=======
-       </div>
+  
+      </div>
      </div>
    </div>
->>>>>>> 4a2bf1cc1edb882a3cc65aa3bbddd0f8505ab7b0
  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>     
     </body>

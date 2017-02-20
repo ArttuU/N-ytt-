@@ -1,13 +1,20 @@
+html{
+    font-family: helvetica;
+}
 .nimi{
     text-align: center;
-    color: lightblue;
+    color: #4FC3F7;
+    margin: 0rem;
 }
 .otsikot{
-    background-color: lightgrey;
+    background-color: #E0E0E0;
     font-weight: bold;
+    margin: 0 0 1rem 0;
+    padding: .8rem;
 }
 .header{
     border: 1px solid black;
+    border-top: none;
 }
 .lomake {
     text-align: center;
@@ -15,6 +22,13 @@
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+a{
+    font-size: 110%;
+}
+a:hover{
+    text-decoration: none;
 }
 
 label {
