@@ -145,7 +145,7 @@
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
              <div class="col-md-5">
-                 <a href="?kill=user"><strong>KIRJAUDU ULOS</strong></a>
+                 <a href="?kill=user">KIRJAUDU ULOS</a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
