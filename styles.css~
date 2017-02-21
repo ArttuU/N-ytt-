@@ -1,0 +1,43 @@
+html{
+    font-family: helvetica;
+}
+.nimi{
+    text-align: center;
+    color: #4FC3F7;
+    margin: 0rem;
+}
+h1{
+    margin: 0;
+}
+.otsikot{
+    background-color: #E0E0E0;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    padding: .8rem;
+}
+.header{
+    border: 1px solid black;
+    border-top: none;
+}
+p{
+    margin: 0rem;
+}
+a{
+    margin: 0rem;
+}
+.viiva{
+    border-left: 1px solid black;
+}
+.otsikot p{
+    margin: 0;
+    padding: 0;
+}
+.center{
+    text-align: center;
+}
+a{
+    font-size: 110%;
+}
+a:hover{
+    text-decoration: none;
+}
