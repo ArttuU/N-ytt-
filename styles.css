@@ -2,9 +2,9 @@ html{
     font-family: helvetica;
 }
 .nimi{
-    text-align:center;
+    text-align: center;
     color: #4FC3F7;
-    margin: 2rem;
+    margin: 2rem 0 2rem 0;
 }
 h1{
     margin: 0;
@@ -13,7 +13,10 @@ h1{
     background-color: #E0E0E0;
     font-weight: bold;
     margin: 0 0 1rem 0;
-    padding: .8rem;
+    font-size: 120%;
+}
+.otsikot p{
+
 }
 .header{
     border: 1px solid black;
@@ -40,4 +43,23 @@ a{
 }
 a:hover{
     text-decoration: none;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 320px){
+    .otsikot{
+        margin: 0;
+        padding: 0;
+    }
+    .otsikot:last-of-type{
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+    .otsikot:first-of-type{
+        padding-top: 1rem;
+    }
+    a{
+        font-size: 120%;
+    }
 }

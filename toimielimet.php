@@ -5,7 +5,7 @@
       <meta charset="utf-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
@@ -15,8 +15,7 @@
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
              <div class="col-md-5">
-                 <a
-                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php"><strong>HALLINTA</strong></a>
+                 <a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php">HALLINTA</a>
              </div>
              <div class="col-md-2 ">
                  <p>KOKKOLA</p>
@@ -29,23 +28,24 @@
             </div>
          </div>
          <div class="row">
-             <div class="col-md-12 nimi">
+             <div class="col-md-12 col-xs-12 nimi">
                  <h1>Toimielimet</h1>
              </div>
+        </div>
          
-             <div class="row">
-                 <div class="col-md-8 otsikot">
+         <div class="row">
+                 <div class="col-md-8 col-xs-12 otsikot">
                      <p>Toimielimet</p>
                  </div>
-             <div class="col-md-2 otsikot">
+             <div class="col-md-2 col-xs-12 otsikot">
                  <p>Viimeisin kokous</p>
              </div>
-             <div class="col-md-2 otsikot">
+             <div class="col-md-2 col-xs-12 otsikot">
                  <p>Dokumenttityyppi</p>
              </div>
          </div>
          
-         <div class="row"> 
+         <div class="row">
            <?php
             include "settings.php";
             
@@ -69,10 +69,9 @@
           $my -> close();
            ?>
          
-  
-      </div>
+         </div>
      </div>
-   </div>
+
  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>     
     </body>
