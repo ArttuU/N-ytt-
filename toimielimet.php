@@ -11,41 +11,41 @@
     <body>
      <div class="container">
          <div class="row header">
-             <div class="col-md-3">
+             <div class="col-md-3 col-sm-6">
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
-             <div class="col-md-5">
-                 <a href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php">HALLINTA</a>
+             <div class="col-md-5 col-xs-12 col-sm-6">
+                 <a href="sessio/login.php">HALLINTA</a>
              </div>
-             <div class="col-md-2 ">
+             <div class="col-md-2 col-xs-8 col-sm-4">
                  <p>KOKKOLA</p>
              </div>
-             <div class="col-md-1 viiva">
+             <div class="col-md-1 col-xs-4 viiva col-sm-4">
                  <p>RSS</p>
              </div>
-             <div class="col-md-1 viiva">
+             <div class="col-md-1 col-xs-12 viiva haku col-sm-4">
                  <p>Haku</p>
             </div>
          </div>
          <div class="row">
-             <div class="col-md-12 col-xs-12 nimi">
+             <div class="col-xs-12 nimi">
                  <h1>Toimielimet</h1>
              </div>
         </div>
          
          <div class="row">
-                 <div class="col-md-8 col-xs-12 otsikot">
+                 <div class="col-md-8 col-xs-12 col-sm-4 otsikot">
                      <p>Toimielimet</p>
                  </div>
-             <div class="col-md-2 col-xs-12 otsikot">
+             <div class="col-md-2 col-xs-1 col-sm-4 otsikot">
                  <p>Viimeisin kokous</p>
              </div>
-             <div class="col-md-2 col-xs-12 otsikot">
+             <div class="col-md-2 col-xs-12 col-sm-4 otsikot">
                  <p>Dokumenttityyppi</p>
              </div>
          </div>
          
-         <div class="row">
+         
            <?php
             include "settings.php";
             
@@ -54,8 +54,10 @@
 
 
            while($t = $nayta -> fetch_object()){
-             echo '<div class="col-md-8">'.'<a href="'. $t -> toimielimet .'.php">' .  $t -> toimielimet."</a>"."</div>";
-             echo '<div class="col-md-2">'."<p>". $t -> viimeisinkokous ."</p>"."</div>";
+             echo '<div class="row">';
+             echo '<div class="col-md-8 col-xs-12 col-sm-4 stuff">'.'<a href="'. $t -> toimielimet .'.php">' .  $t -> toimielimet."</a>"."</div>";
+             echo '<div class="col-md-2 col-xs-12 col-sm-4 stuff">'."<p>". $t -> viimeisinkokous ."</p>"."</div>";
+             
           }
 
         $tyyppi = 'SELECT * FROM 6552_Vuosi';
@@ -63,13 +65,14 @@
 
         while($r = $nayta2 -> fetch_object()){
             $numero = $numero + 1;
-            echo '<div class="col-md-2">'.'<a href="'. $r -> tyyppi.$numero. '.php">'. $r -> tyyppi. "</a>"."</div>"; 
+            echo '<div class="col-md-2 col-xs-12 col-sm-4 stuff">'.'<a href="'. $r -> tyyppi.$numero. '.php">'. $r -> tyyppi. "</a>"."</div>"; 
+            echo '</div>';
         }
 
           $my -> close();
            ?>
          
-         </div>
+
      </div>
 
  

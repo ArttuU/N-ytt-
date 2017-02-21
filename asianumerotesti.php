@@ -11,20 +11,20 @@
     <body>
      <div class="container">
          <div class="row header">
-             <div class="col-md-3">
+             <div class="col-md-3 col-sm-6">
                  <p>DYNASTY TIETOPALVELU</p>
              </div>
-             <div class="col-md-5">
+             <div class="col-md-5 col-xs-12 col-sm-6">
                  <a
-                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/sessio/login.php"><strong>HALLINTA</strong></a>
+                 href="sessio/login.php"><strong>HALLINTA</strong></a>
              </div>
-             <div class="col-md-2">
+             <div class="col-md-2 col-xs-4 col-sm-4">
                  <p>KOKKOLA</p>
              </div>
-             <div class="col-md-1">
+             <div class="col-md-1 col-xs-8 col-sm-4 viiva">
                  <p>RSS</p>
              </div>
-             <div class="col-md-1">
+             <div class="col-md-1 col-xs-12 col-sm-4 haku viiva">
                  <p>Haku</p>
             </div>
          </div>
@@ -32,7 +32,7 @@
              <div class="col-md-12 nimi">
                  <h1>TESKaupunginhallitus Esityslista 13.02.2017/Asianro 75TI</h1>
              </div>
-
+        </div>
            <?php
             include "settings.php";
             
@@ -40,14 +40,14 @@
            $nayta = $my -> query($otsikko);
            
            while($t = $nayta -> fetch_object()){
-               echo '<div class="row">';
-                echo '<div class="col-md-5">';
+               echo '<div class="row as-otsikko">';
+                echo '<div class="col-md-5 col-xs-10 col-sm-4 as-otsikko">';
                  echo '<p>'. $t -> toimielin . '</p>';
                 echo '</div>';
-                echo '<div class="col-md-2">';
+                echo '<div class="col-md-2 col-xs-2 col-sm-4">';
                  echo '<p>'. $t -> asianro . '</p>';
                 echo '</div>';
-                echo '<div class="col-md-5">';
+                echo '<div class="col-md-5 col-xs-12 col-sm-4">';
                  echo '<p>'. $t -> pva . '</p>';
                 echo '</div>';
                echo '</div>';
@@ -57,7 +57,7 @@
                 echo '</div>';
                echo '</div>';
                echo '<div class="row">';
-                echo '<div class="col-md-12">';
+                echo '<div class="col-md-12 text">';
                  echo '<pre>' . $t -> text . '</pre>';
                 echo '</div>' ;
                echo '</div>';
@@ -67,7 +67,6 @@
            ?>
          
      </div>
-   </div>
  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>     
     </body>

@@ -16,7 +16,7 @@ h1{
     font-size: 120%;
 }
 .otsikot p{
-
+    
 }
 .header{
     border: 1px solid black;
@@ -33,7 +33,7 @@ a{
 }
 .otsikot p{
     margin: 0;
-    padding: 0;
+    padding: .5rem;
 }
 .center{
     text-align: center;
@@ -43,8 +43,29 @@ a{
 }
 a:hover{
     text-decoration: none;
+    cursor: pointer;
 }
-
+.stuff{
+    text-transform: lowercase;
+}
+.stuff::first-letter{
+    text-transform: uppercase;
+}
+.as-otsikko{
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 120%;    
+}
+.as-otsikko::first-letter{
+    text-transform: uppercase;
+}
+.text pre{
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    font-family: helvetica;
+    font-size: 120%;
+}
 
 /* Mobile */
 @media screen and (max-width: 320px){
@@ -52,14 +73,49 @@ a:hover{
         margin: 0;
         padding: 0;
     }
-    .otsikot:last-of-type{
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-    }
-    .otsikot:first-of-type{
-        padding-top: 1rem;
-    }
     a{
         font-size: 120%;
     }
+    .viiva{
+        border: none;
+    }
+    .header{
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .haku{
+        border-top: 1px solid black;
+    }
+    .stuff{
+        font-size: 130%;
+    }
+    .stuff:last-of-type{
+        border-bottom: 1px solid black;
+    }
+    .stuff:first-of-type{
+        margin-top: 1rem;
+    }
+    .osall{
+        font-size: 130%;
+    }
+    .nimi h1{
+        font-size: 200%;
+    }
 }
+/* Tablet */
+@media screen and (max-width: 768px){
+    .viiva{
+        border: none;
+    }
+    .haku{
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+    }
+}
+
+
+
+
+
+
+
