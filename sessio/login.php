@@ -17,7 +17,7 @@
              </div>
              <div class="col-md-5">
                  <a
-                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/toimielimet.php"><strong>ETUSIVU</strong></a>
+                 href="http://cosmo.kpedu.fi/~arttuuuskartano/php2017/n%C3%A4ytt%C3%B63/N-ytt-/toimielimet.php">ETUSIVU</a>
              </div>
              <div class="col-md-2">
                  <p>KOKKOLA</p>
@@ -41,10 +41,10 @@
           <div class="col-md-12 lomake">
          
          <form action="index.php" method="post">
-           <p>Tunnus:<br>
-         <input type="text" name="login"></p>
-           <p>Salasana:<br>
-         <input type="password" name="passwd"></p>
+           <label>Tunnus:</label>
+         <input type="text" name="login"><br><br>
+           <label>Salasana:</label>
+         <input type="password" name="passwd"><br><br>
          <button class="button" name="btn" value="1">Kirjaudu</button>
        </form>
        
